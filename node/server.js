@@ -9,8 +9,8 @@ var talking_dude = require('./modules/talking_dude.js');
 var buggy = require('./modules/buggy.js');
 var color_jam = require('./modules/color_jam.js');
 var one_drawing = require('./modules/one_drawing.js');
-var how_were_feeling = require('./modules/how_were_feeling.js');
-var all_draw = require('./modules/all_draw.js');
+// var how_were_feeling = require('./modules/how_were_feeling.js');
+// var all_draw = require('./modules/all_draw.js');
 var hello_world = require('./modules/hello_world.js');
 
 app.set('ipaddr', "127.0.0.1");
@@ -40,13 +40,13 @@ var drawing = io.of('/node/one_drawing').on('connection', function (socket) {
 	one_drawing.one_drawing_io(socket, io, drawing);
 });
 
-var feeling = io.of('/node/how_were_feeling').on('connection', function (socket) {
-	how_were_feeling.how_were_feeling_io(socket, io, feeling);
-});
+// var feeling = io.of('/node/how_were_feeling').on('connection', function (socket) {
+// 	how_were_feeling.how_were_feeling_io(socket, io, feeling);
+// });
 
-var canvas = io.of('/node/all_draw').on('connection', function (socket) {
-	all_draw.all_draw_io(socket, io, canvas);
-});
+// var canvas = io.of('/node/all_draw').on('connection', function (socket) {
+// 	all_draw.all_draw_io(socket, io, canvas);
+// });
 
 var hello = io.of('/node/hello_world').on('connection', function (socket) {
 	hello_world.hello_world_io(socket, io, hello);

@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "canvas": "1.0.4",
     "cron": "*",
     "ejs": "0.8.4",
     "express": "3.3.8",
